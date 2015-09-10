@@ -1,6 +1,5 @@
 
 #include <File.au3>
-#include <IE.au3>
 
 Local $iDelete = FileDelete ("watchdog.log")
 Local $hFile = FileOpen("watchdog.log", 1)
@@ -33,7 +32,7 @@ While 1
 
 	; Si fenetre erreur Windows Contenant OpenSim, fermeture Automatique
 	if WinKill("OpenSim")=1 Then
-	   msgbox(4096,"","Fermeture Simulateur",10)
+	   msgbox(4096,"","Fermeture fenetre crash Simulateur",10)
 	EndIf
 	Sleep ($timeCheck)
 WEnd
